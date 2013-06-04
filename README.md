@@ -3,6 +3,8 @@ JSDrop
 
 Using some javascript and CSS to make custom drop down arrows for select boxes for all browsers including IE8+
 
+Preview/Demo: [http://codepen.io/WillsonSmith/full/DobEJ](http://codepen.io/WillsonSmith/full/DobEJ)
+
 	Licensed under the CSS-Tricks license http://css-tricks.com/license/ (see bottom of readme)
 
 File Size:
