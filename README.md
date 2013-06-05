@@ -18,6 +18,136 @@ What it does
 ======
 JSDrop is a small bit of javascript, as well as some css tricks in order to have custom drop down arrows cross-browser using css "content:" and data-* attributes.
 
+How to use it
+======
+1.Create your form, and select input item
+	
+	<form>
+		<select>
+			<option>one</option>
+		</select>
+	</form>
+
+2.Add a class to your select element 
+	
+	<select class='theSelect'>
+			<option>one</option>
+	</select>
+	
+3.Add a wrapper to your select element, give it a class, and add a data-content attribute
+
+	<div class='selectWrap' data-content="">
+		<select class='theSelect'>
+			<option>Select an Option</option>
+		</select>
+	</div>
+	
+4.Style your wrapper to the way you want your custom select box to look
+	
+	.selectWrap{
+
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: inset 0px 0px 4px #3f3f3f;
+	width: 500px;		
+
+	}
+	
+5.Add `position: relative;` and `z-index: 1;` to your wrapper
+	
+	.selectWrap{
+
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: inset 0px 0px 4px #3f3f3f;
+	width: 500px;		
+	
+	position: relative;
+	z-index: 1;
+	
+	}
+	
+6.Style your wrapper's `:after` to look how you want your drop down arrow to look
+	
+	 .selectWrap:after{
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+	border-radius: 0 5px 5px 0;
+
+	background: #27ae60;
+	content: "\25BC";
+
+	padding: 6px 6px;
+
+	height: 100%;
+	width: 30px;
+
+	}
+	
+7.Add `position: absolute;` and `z-index: -1` to your `:after` styles
+
+	.selectWrap:after{
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+	border-radius: 0 5px 5px 0;
+
+	background: #27ae60;
+	content: "\25BC";
+
+	padding: 6px 6px;
+
+	height: 100%;
+	width: 30px;
+
+	
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -1;
+
+	}
+	
+> `z-index` is set to -1, this is again important in allowing your arrow to be clickable.
+
+8.Add a `:before` style to your wrapper and set content: `attr(data-content);` (this will display what is selected)
+	
+	.selectWrap:before{
+
+	content: attr(data-content);
+	position: absolute;
+	top:5px;
+	left:5px;
+
+	}
+	
+9.Set the select element's opacity to 0, and appearance to none
+
+	.theSelect{
+	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	opacity: 0;
+	
+	height: 30px;
+	width: 100%;
+
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+
+	}
+	
+10.Include the Javascript, and make sure your select element's class matches the one in the javascript.
+>`select = document.querySelectorAll('.theSelect')`
+	
+###Please continue reading for a more thorough understanding.
+
+
 
 How it works
 ======
