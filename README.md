@@ -386,7 +386,7 @@ A more basic how-to will be coming soon.
 >If you copy an entire article from this site and republish it on your own site like you wrote it, that's a little uncool. I won't be mad at you for stealing, I just think you're better than that and want to see you do better. I'm not going to come after you though. I'd rather play ball with my dog. The only time I'll be mad at you is if you go out of your way to try and hurt me somehow. And again I probably won't even be mad, just sad. Unless I'm having a bad day too, in which case I apologize in advance for my snarky replies.
 
 
->I want the web to get better and being all Johnny Protective over everything doesn't get us there. I understand other people feel differently about this and might have semi-legit reasons for protecting certain code, design, writing, or whatever. I work on some closed-source projects myself. CSS-Tricks isn't one of them. Go nuts.
+>I want the web to get better and being all Johnny Protective over everything doesn't get us there. I understand other people feel differently about this and might have semi-legit reasons for protecting certain code, design, writing, or whatever. I work on some closed-source projects myself. This isn't one of them. Go nuts.
 
 [CSS-Tricks License Link](http://css-tricks.com/license/)
 
