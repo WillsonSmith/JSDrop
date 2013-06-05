@@ -1,6 +1,18 @@
+<a id="top"></a>
+
+1. [Introduction](#intro)
+2. [What it Does](#whatdoes)
+3. [How to Use](#howto)
+4. [How it Works](#howwork)
+	* [Markup](#workhtm)
+	* [CSS](#workcss)
+	* [JS](#workjs)
+5. [License](#license)
+	
+
+<a id="intro"></a>
 JSDrop
 ======
-
 Using some javascript and CSS to make custom drop down arrows for select boxes for all browsers including IE8+
 
 ###Preview/Demo: [http://codepen.io/WillsonSmith/full/DobEJ](http://codepen.io/WillsonSmith/full/DobEJ)
@@ -14,10 +26,14 @@ File Size:
 * minified: 470 bytes
 * gzipped & minified: 297 bytes
 
+<a id="whatdoes"></a>
+
 What it does
 ======
 JSDrop is a small bit of javascript, as well as some css tricks in order to have custom drop down arrows cross-browser using css "content:" and data-* attributes.
 
+<a id="howto"></a>
+[Top](#top)
 How to use it
 ======
 1.Create your form, and select input item
@@ -148,7 +164,8 @@ How to use it
 ###Please continue reading for a more thorough understanding.
 
 
-
+<a id="howwork"></a>
+[Top](#top)
 How it works
 ======
 
@@ -160,6 +177,8 @@ The select box has a wrapper, which does not require any specific class, but req
 	
 (Note: this is automatically set to the first/default item in your drop down, however IE8 may not play nice without it being set.)
 
+<a id="workhtm"></a>
+[Top](#top)
 ##The Markup
 
 Your form will look something like below:
@@ -177,6 +196,8 @@ Your form will look something like below:
 
 	</form>
 	
+<a id="workcss"></a>
+[Top](#top)
 ##The CSS	
 	
 The CSS of the wrapper is then styled to how you want your select box to look, this is because we will be hiding our select box.
@@ -261,6 +282,8 @@ The important bit here is setting the opacity. In Webkit, setting `-webkit-appea
 
 This will hide the select box, thus leaving your wrapper to act as the select box in its place. The drop down is still clickable, and the options of the dropdown will still appear as normal, and thus make this trick work. Note that if you were to set `visibility: hidden;` or `display: none;` this would NOT work because the select box would no longer be "there". This works by still having the select box "there", but be invisible. 
 
+<a id="workjs"></a>
+[Top](#top)
 ##The JavaScript
 
 Now, you may be wondering "Won't setting `opacity: 0;` hide the option selected as well?". You would be correct, which is why we included a `data-content=""` attribute on the wrapper element.
@@ -373,7 +396,9 @@ The whole thing is wrapped in `(function(){})();` in order to preserve namespaci
 
 A more basic how-to will be coming soon.
 
+[Top](#top)
 >LICENSE
+<a id='license'></a>
 
 >SUPER IMPORTANT LEGAL DOCUMENT
 ------------------------------
