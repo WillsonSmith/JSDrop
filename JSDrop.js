@@ -7,14 +7,16 @@
 	function innerContent(el) {//gets content of option selected
 		var indval;
 
-		if (el && el.textContent) {//if the element exists, and .textContent is supported
+		if (el){//if element exists
+			if (el.textContent) {//if .textContent is supported
 
-			indval = el.textContent;
+				indval = el.textContent;
 
-		} else {//else not supported, use innerText
+			} else {//else not supported, use innerText
 
-			indval = el.innerText;
+				indval = el.innerText;
 
+			}
 		}
 
 		return indval;

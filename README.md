@@ -22,9 +22,9 @@ Using some javascript and CSS to make custom drop down arrows for select boxes f
 
 File Size:
 
-* uncompressed: 994 bytes
-* minified: 470 bytes
-* gzipped & minified: 297 bytes
+* uncompressed: 1KB
+* minified: 472 bytes
+* gzipped & minified: 298 bytes
 
 <a id="whatdoes"></a>
 
