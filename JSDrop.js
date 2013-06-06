@@ -4,14 +4,14 @@
 	var select = document.querySelectorAll('.theSelect'),//set to your dropdown class
 		data = 'data-content';
 
-	function innerContent(el) {
+	function innerContent(el) {//gets content of option selected
 		var indval;
 
-		if (el && el.textContent) {
+		if (el && el.textContent) {//if the element exists, and .textContent is supported
 
 			indval = el.textContent;
 
-		} else {
+		} else {//else not supported, use innerText
 
 			indval = el.innerText;
 
@@ -23,18 +23,18 @@
 
 	function setAttr(el) {
 
-		var index = el.options.selectedIndex,
-		indval = el.options[index];
+		var index = el.options.selectedIndex,//get the selected index of the option array
+		indval = el.options[index];//get the specific option
 
 		indval = innerContent(indval);
 
-		el.parentNode.setAttribute(data, indval);
+		el.parentNode.setAttribute(data, indval);//set wrapper attribute
 
 	}
 
 	function eventChange(el) {
 
-		if (el.addEventListener) {
+		if (el.addEventListener) {//check that event listener works
 
 			el.addEventListener('change', function () {
 
@@ -42,7 +42,7 @@
 
 			}, false);
 
-		} else if (el.attachEvent) {
+		} else if (el.attachEvent) {//else is probabl ie8, use attachEvent
 
 			el.attachEvent('onchange', function () {
 
